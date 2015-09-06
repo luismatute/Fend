@@ -92,7 +92,7 @@ define(['jquery'], function ($) {
 			// Cmd         => 91
 			// Num lock    => 144
 			// AltGr key   => 225
-			excludedKeys = [ 16, 17, 18, 20, 35, 36, 37, 38, 39, 40, 45, 91,144, 225 ],
+			excludedKeys: [ 16, 17, 18, 20, 35, 36, 37, 38, 39, 40, 45, 91,144, 225 ],
 			messages: {},
 			errorClass: 'error',
 			validClass: 'valid',
@@ -122,7 +122,7 @@ define(['jquery'], function ($) {
 					// this.element( element );
 				}
 			},
-			onkeypress: function (element, evt) {
+			onkeydown: function (element, evt) {
 				console.log(1);
 			},
 			// TODO: highlighting
@@ -178,6 +178,7 @@ define(['jquery'], function ($) {
 
 		prototype: {
 			init: function () {
+				var _this = this;
 				this.submitted = {};
 				this.pendingRequest = 0;
 				this.pending = {};
@@ -185,17 +186,17 @@ define(['jquery'], function ($) {
 				this.reset();
 
 				function delegate( event ) {
-					var fend = $.data( this.form, pluginName ),
+					var fend = $.data( _this.form, pluginName ),
 						eventType = "on" + event.type.replace( /^validate/, "" ),
 						settings = fend.settings;
 
-					if ( settings[ eventType ] && !$( this ).is( settings.ignore ) ) {
-						settings[ eventType ].call( fend, this, event );
+					if ( settings[ eventType ] && !$( _this ).is( settings.ignore ) ) {
+						settings[ eventType ].call( fend, _this, event );
 					}
 				}
 
 				$( this.currentForm )
-					.on( "focusin.validate focusout.validate keyup.validate keypress.validate",
+					.on( "focusin.validate focusout.validate keyup.validate onkeydown.validate",
 						":text, [type='password'], [type='file'], select, textarea, [type='number'], [type='search'], " +
 						"[type='tel'], [type='url'], [type='email'], [type='datetime'], [type='date'], [type='month'], " +
 						"[type='week'], [type='time'], [type='datetime-local'], [type='range'], [type='color'], " +

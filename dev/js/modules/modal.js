@@ -101,7 +101,7 @@ define('modal',[], function(){
 
 				function close_evt (evt) {
 					evt.stopPropagation();
-					if( typeof this !== 'undefined' && evt.target !== this ) return false;
+					if( typeof self !== 'undefined' && evt.target !== self ) return false;
 					$tpl.remove();
 					$mainWrap.add('body').removeClass(options.body_class);
 					$(document).off('keyup');
