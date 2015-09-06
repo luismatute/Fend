@@ -1,0 +1,77 @@
+//
+// Variables
+// --------------------------------------------------
+
+//== Paths
+	$font-path               : "../fonts";
+	// $cdn-path                : "//cdn.sandals.com/sandalsselect/v3/";
+	$cdn-path                : "";
+	$img-path                : "#{$cdn-path}/assets/img";
+
+//== Scafolding
+	$body-bg                 : rgba(white, .9) !default;
+	$link-color: blue;
+	$transition-duration:	0.2s !default;
+	$menu-height: 8rem;
+	$rem-fallback: true !default;
+	$rem-px-only: false !default;
+
+//== Typography
+	$font-arial				 : Arial, Helvetica, sans-serif !default;
+	$font-helv25			 : 'HelveticaNeue25UltraLight', Helvetica, sans-serif;
+	$font-helv35			 : 'HelveticaNeue35Thin', Helvetica, sans-serif;
+	$font-helv37			 : 'HelveticaNeue37LightCondensed', Helvetica, sans-serif;
+	$font-helv47			 : 'HelveticaNeue47LightCondensed', Helvetica, sans-serif;
+	$font-helv57			 : 'HelveticaNeue57Condensed', Helvetica, sans-serif;
+	$font-helv67			 : 'HelveticaNeue67MdCn', Helvetica, sans-serif;
+	$font-helv77			 : 'HelveticaNeue77BoldCondensed', Helvetica, sans-serif;
+	$font-trajan			 : 'TrajanProRegular', Helvetica, sans-serif;
+	$font-icons				 : "sandals" !default;
+	$font-base  			 : $font-arial !default;
+	$font-size               : 10px !default;
+	$font-weight             : 400 !default;
+	$font-color				 : color("brown");
+
+//== Components
+	$padding-base-vertical   : .6rem !default;
+	$padding-base-horizontal : 1.2rem !default;
+
+	$padding-large-vertical  : 1rem !default;
+	$padding-large-horizontal: 1.6rem !default;
+
+	$padding-small-vertical  : .5rem !default;
+	$padding-small-horizontal: 1rem !default;
+
+	$padding-xs-vertical     : .1rem !default;
+	$padding-xs-horizontal   : .5rem !default;
+
+	$border-radius-base      : .4rem !default;
+	$border-radius-large     : .6rem !default;
+	$border-radius-small     : .3rem !default;
+
+//== Viewport Sizes
+	$screen-xxs              : 32rem !default;
+	$screen-xs               : 48rem !default;
+	$screen-sm               : 64rem !default;
+	$screen-md               : 76.8rem !default;
+	$screen-lg               : 102.4rem !default;
+	$screen-xl               : 138.0rem !default;
+	$screen-xxl              : 182.4rem !default;
+
+	$viewport-m				 : 32rem !default;
+	$viewport-l				 : 48rem !default;
+
+//== Grid System
+	$grid-full               : 100%;
+	$grid-half               : 100% / 2;
+	$grid-gutter             : 3rem;
+
+	$col-start               : 1;
+	$col-end                 : 12;
+	$col-common              : 25, 40, 60, 75;
+
+	$num-cols                : $col-end;
+	$gutter-width            : $grid-gutter;
+
+	$element-top-margin      : $gutter-width / 3 !default;
+	$element-bottom-margin   : ($gutter-width * 2) / 3 !default;

@@ -1,0 +1,2 @@
+require.config({baseUrl:_conf.jsPath,waitSeconds:0,paths:{jquery:["https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min","libs/jquery"],owl:"libs/owl.carousel",util:"modules/util",common:"modules/common",fend:"modules/fend",modal:"modules/modal"},shim:{util:["jquery"],common:["jquery","util"]}}),define(["common"],function(){});
+//# sourceMappingURL=maps/app.js.map

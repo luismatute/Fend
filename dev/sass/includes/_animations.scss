@@ -1,0 +1,9 @@
+//
+// Animations
+// --------------------------------------------------
+
+//== Show animation
+	@include keyframes('show') {
+		0%   { opacity: 0.01; }
+		100% { opacity: 1.00; }
+	}

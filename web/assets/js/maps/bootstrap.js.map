@@ -1,0 +1,1 @@
+{"version":3,"sources":["bootstrap.js"],"names":["require","_conf","jsPath"],"mappings":"AAAAA,SAASC,MAAMC,OAAO","file":"bootstrap.js","sourcesContent":["require([_conf.jsPath+'/app.js']);"],"sourceRoot":"/source/"}

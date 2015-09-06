@@ -1,0 +1,2 @@
+define("common",["fend"],function(){"use strict";function n(){var n=$(".loading-wrap");$.ajaxSetup({method:"POST",dataType:"json"}),$(document).ajaxStart(function(){n.addClass("active")}).ajaxSend(function(n,a,e){}).ajaxComplete(function(){n.removeClass("active")})}function a(){$(".de").fend()}$(document).ready(function(){n(),a(),_.log("["+_conf.name+"]: Initiated")})});
+//# sourceMappingURL=../maps/modules/common.js.map

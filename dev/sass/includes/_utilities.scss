@@ -1,0 +1,37 @@
+//
+// Utility classes
+// --------------------------------------------------
+
+
+//== Quick floats
+	.flt-right { float: right; }
+	.flt-left { float: left; }
+	.flt-none { float: none; }
+	.clearfix { @include clearfix; }
+
+// Postitioning
+	.center { margin: auto auto; }
+	.txt-center { text-align: center; }
+	.txt-right  { text-align: right;  }
+	.txt-left   { text-align: left;   }
+
+//== Toggling content
+	.hide { display: none; }
+	.show { display: block; }
+	.invisible { visibility: hidden; }
+	.muted { opacity: .7; }
+	.noflow { overflow: hidden; }
+
+//== Positioning
+	.affix { position: fixed; }
+	.pr { position: relative; }
+	.center { margin: auto auto; }
+
+//== Inline Block
+	.inline-block, .ib { @include inline-block(); }
+
+//== Images
+	.img-responsive { @include img-responsive; }
+
+//== Transition
+	.animate { @include transition(all $transition-duration); }

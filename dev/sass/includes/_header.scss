@@ -1,0 +1,110 @@
+//
+// Layout Header
+// --------------------------------------------------
+
+//== Main Styles
+	.main-head {
+		position: relative;
+		z-index: 50;
+		height: $menu-height;
+		background: rgba(0,0,0,.15);
+	}
+	.vw-home .main-head {
+		.col {
+			height: $menu-height;
+			background: rgba(0,0,0,.15);
+
+			& + .col { border-left: .3rem solid transparent; }
+		}
+	}
+
+//== Main Logo
+	.main-logo {
+		// padding-top: 0.6rem;
+		margin: 0 0 0 3rem;
+		height: $menu-height;
+		line-height: $menu-height;
+
+		a {
+			@include gradient-vertical(#ececec,#d1d1d1);
+			font-size: 4rem;
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+
+			&:hover { color: white }
+		}
+	}
+
+//== Book Now
+	.gl-book-btn.imp {
+		max-width: 13rem;
+		width: 100%;
+		height: 100%;
+		font: 2.4rem/6.8rem $font-helv77;
+		color: white;
+
+		&:hover { color: white; }
+	}
+
+//== Main Menu Btn
+	.menu-btn.imp {
+		position: relative;
+		display: block;
+		max-width: 8rem;
+		width: 100%;
+		height: 100%;
+
+		b {
+			@include translate(-50%,-50%);
+			@include transition(all $transition-duration);
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			display: block;
+			width: 3.2rem;
+			height: .4rem;
+			background: white;
+			border-radius: .2rem;
+
+			&:nth-child(1) { margin-top: -1rem; }
+			&:nth-child(3) { margin-top: 1rem; }
+		}
+		&.active b {
+			margin: -.2rem 0 0 -1.6rem;
+
+			&:nth-child(1) { @include rotate(-45deg); }
+			&:nth-child(2) { opacity: 0; }
+			&:nth-child(3) { @include rotate(45deg); }
+		}
+	}
+
+//== Main Menu
+	.main-menu {
+		@include translate(100%,0);
+		position: fixed;
+		top: $menu-height;
+		right: 0;
+		bottom: 0;
+		z-index: 50;
+		width: 36rem;
+		background: $body-bg;
+		overflow: auto;
+
+		ul { padding: 0 2rem; }
+		li + li a { border-top: .3rem solid #cecece; }
+		a {
+			display: block;
+			width: 100%;
+			text-align: center;
+			font: 3.6rem/9.6rem $font-helv67;
+			color: color("grey", "darken-1");
+
+		}
+		.book-now {
+			color: white;
+			font-size: 5.3rem;
+			line-height: 15.2rem;
+			background: color("red");
+		}
+		&.active { @include translate(0,0); }
+	}

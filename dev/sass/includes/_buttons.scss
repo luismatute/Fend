@@ -1,0 +1,123 @@
+//
+// Buttons
+// --------------------------------------------------
+
+//== Button sizes
+	@mixin button-size($padding-vertical, $padding-horizontal, $font-size: $font-size, $line-height: 1, $border-radius: 0) {
+		padding: $padding-vertical $padding-horizontal;
+		font-size: $font-size;
+		line-height: $line-height;
+		// border-radius: $border-radius;
+	}
+	@mixin button-variant($background: color('grey'), $color: color('shades','white'), $border: $background) {
+		color: $color;
+		background-color: $background;
+		border-color: $border;
+
+		&:hover,
+		&:focus,
+		&:active {
+			color: $color;
+			background-color: darken($background, 10%);
+			border-color: darken($border, 12%);
+		}
+	}
+
+//== Base styles
+	[class^="btn-"]:not(.btn-group), [class*=" btn-"]:not(.btn-group) {
+		@include transition("all 0.2s");
+		@include button-size($padding-base-vertical, $padding-base-horizontal);
+		@include user-select(none);
+		display: inline-block;
+		margin-bottom: 0; // For input.btn
+		font-family: $font-arial;
+		font-size: 1.5rem;
+		font-weight: bold;
+		text-align: center;
+		text-decoration: none;
+		vertical-align: middle;
+		cursor: pointer;
+		background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
+		border: .1rem solid transparent;
+		white-space: nowrap;
+		outline: none;
+
+		&:hover,
+		&:focus {
+			text-decoration: none;
+		}
+
+		&:active,
+		&.active {
+			outline: 0;
+			background-image: none;
+		}
+
+		&.disabled,
+		&[disabled],
+		fieldset[disabled] & {
+			@include box-shadow(none);
+			opacity: .65;
+			cursor: not-allowed;
+			pointer-events: none; // Future-proof disabling of clicks
+		}
+	}
+
+//== Alternate buttons
+	.btn-default {
+		// TODO: replace color with the variable.
+		@include button-variant(#373737);
+	}
+	// .btn-black {
+	// 	@include button-variant(color('brand-grey', 'dark'));
+	// }
+	// .btn-white {
+	// 	@include button-variant(white, color("brand-grey", "dark"), #c9c9c9);
+	// }
+	.btn-link {
+		@include button-variant(transparent,$link-color);
+		&:hover { text-decoration: underline; }
+	}
+
+//== Sizes
+	.btn-lg {
+		@include button-size($padding-large-vertical, $padding-large-horizontal);
+	}
+	.btn-sm {
+		@include button-size($padding-small-vertical, $padding-small-horizontal);
+	}
+	.btn-xs {
+		@include button-size($padding-xs-vertical, $padding-xs-horizontal);
+	}
+	.btn-block {
+		// display: block;
+		width: 100%;
+	}
+
+//== Inline Buttons Group
+	.btn-group,
+	.btn-group-vertical {
+		position: relative;
+		display: block;
+		vertical-align: middle; // match .btn alignment given font-size hack above
+
+		.col { padding: 0 .1rem; }
+	}
+	// Set corners individual because sometimes a single button can be in a .btn-group and we need :first-child and :last-child to both match
+	// .btn-group > [class^="btn-"],
+	// .btn-group > [class*=" btn-"] {
+	// 	&:first-child {
+	// 		margin-left: 0;
+
+	// 		&:not(:last-child) {
+	// 			@include border-right-radius(0);
+	// 		}
+	// 	}
+	// 	&:last-child {
+	// 		margin-left: 0;
+
+	// 		&:not(:first-child) {
+	// 			@include border-left-radius(0);
+	// 		}
+	// 	}
+	// }

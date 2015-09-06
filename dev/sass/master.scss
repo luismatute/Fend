@@ -1,0 +1,40 @@
+/*
+// Master Stylings
+// Date: July 2015
+// Developers:
+// Luis Matute			- lmatute@sanservices.hn
+// Jean-Pierre Sierens	- jpsierens@sanservices.hn
+// --------------------------------------------------
+*/
+
+//== Core variables and mixins
+@import "includes/color";
+@import "includes/mixins";
+@import "includes/variables"; // Modify this for custom colors, font-sizes, etc
+
+//== CSS Reset
+@import "includes/reset";
+@import "includes/base";
+
+//== Typography
+@import "includes/type";
+@import "includes/fonts";
+@import "includes/icons";
+
+//== Components
+@import "includes/buttons";
+@import "includes/card";
+@import "includes/form";
+
+//== Page structure
+@import "includes/grid";
+@import "includes/header";
+@import "includes/footer";
+
+//== External
+
+//== Views
+
+//== Utility classes
+@import "includes/animations";
+@import "includes/utilities"; 	// Has to be last to override when necessary

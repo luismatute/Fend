@@ -1,0 +1,198 @@
+//
+// Home Stylings
+// --------------------------------------------------
+
+//== General
+	.vw-home {
+		h3 {
+			margin-top: 1.2rem;
+			color: color("green");
+			font: 5.6rem/1 $font-trajan;
+
+			span {
+				color: color("brown");
+				font-size: 2.8rem;
+			}
+			b { letter-spacing: -0.03rem; }
+		}
+		h4 {
+			margin-bottom: -.5rem;
+			font: 4.5rem $font-trajan;
+			color: color("grey","darken-2");
+
+			span {
+				display: block;
+				margin-bottom: -1rem;
+				font-size: 2.8rem;
+			}
+		}
+		h5 {
+			color: color("brown");
+			font: 2.3rem/1 $font-helv57;
+
+			span {
+				display: block;
+				font-size: 3.9rem;
+				color: color("grey","darken-2");
+			}
+		}
+		p.pad {
+			padding: 0 5rem;
+		}
+		.main-head {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+		}
+		.gl-book-btn.imp,
+		.menu-btn.imp { border-left: .3rem solid rgba(255,255,255,.1); }
+		.awards {
+			margin-top: 7rem;
+			padding: 4.5rem 0;
+			color: white;
+
+			h4 {
+				color: color("green","lighten-1");
+
+				span {
+					margin-top: -.4rem;
+					color: white;
+				}
+			}
+		}
+		.rst-showcase {
+			padding: 7.5rem 0 3.7rem;
+
+			h4 {
+				color: color("green");
+
+				span {
+					margin-top: -.8rem;
+					color: color("brown");
+				}
+			}
+		}
+		.dest-card {
+			padding: 4rem 2rem 5.7rem;
+			color: color("brown");
+			font: 2.414rem/1 $font-helv67;
+
+			i {
+				font-size: 7rem;
+				color: rgba(color("green"), .5);
+			}
+			span {
+				display: block;
+				margin: .9rem 0 .4rem;
+				color: color("green");
+				font-size: 2.786rem;
+			}
+			b { font-size: 4.271rem; }
+		}
+		.shadow-down {
+			background: url("#{$img-path}/global/shadow-down.png") center top no-repeat;
+
+			a {
+				@include gradient-vertical(lighten(color("grey","darken-2"), 10%), color("grey","darken-2"));
+				margin-top: -.1rem;
+				color: white;
+				font: 3.2rem/1 $font-helv67;
+				border-radius: 0 0 0.4rem 0.4rem;
+
+				span {
+					display: block;
+					margin-top: -.1rem;
+					font-size: 3rem;
+				}
+				sup {
+					top: -0.6em;
+					font-size: medium;
+				}
+			}
+		}
+		.red-book-btn {
+			margin-top: 7rem;
+			padding: 1.2rem 0 1.7rem;
+			color: white;
+			font: 7rem $font-helv67;
+			background: color("red");
+
+			&:hover { background: darken(color("red"), 10%) }
+			span {
+				display: block;
+				margin-top: -.6rem;
+				font: 2.8rem/1 $font-helv57;
+			}
+			b { font: 3.7rem $font-helv77; }
+			i { font-size: 5.4rem; }
+		}
+		.ball {
+			position: absolute;
+			display: block;
+			padding: 0;
+			width: 26rem;
+			height: 26rem;
+			border-radius: 50%;
+			border: .6rem solid white;
+			overflow: hidden;
+
+			img {
+				width: 100%;
+				height: 100%;
+			}
+		}
+		.inclsn {
+			position: relative;
+			margin: 1rem 0;
+			min-height: 33rem;
+			text-align: left;
+			overflow: hidden;
+
+			&.left {
+				.ball { left: -3rem; }
+				.content { right: 0 }
+			}
+			&.right .ball {
+				right: -3rem;
+			}
+			&.dining {
+				min-height: 34rem;
+
+				h5 { font-size: 2.1rem }
+			}
+		}
+		.content {
+			position: absolute;
+			margin-top: .5rem;
+			padding: 0 3rem;
+			width: 41rem;
+			h5 + p { margin-top: .6rem }
+			p {
+				font-size: 1.8rem;
+			}
+		}
+		.rst-owl { margin-top: 3.5rem }
+	}
+
+hr.green {
+	@include gradient-horizontal-three-colors(rgba(color("green"), 0), rgba(color("green"), 1), 50%, rgba(color("green"), 0));
+	margin: 0;
+	height: .1rem;
+	border: 0;
+}
+
+//== Owl
+	.owl-carousel .owl-stage-outer { height: 0 }
+	.home-owl {
+		margin-bottom: 3rem;
+
+		.owl-dots {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			height: 4.8rem;
+			background: rgba(color("grey","darken-2"), .7);
+		}
+	}

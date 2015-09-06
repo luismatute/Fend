@@ -1,0 +1,70 @@
+//
+// Layout Footer
+// --------------------------------------------------
+
+//== Main Styles
+	.main-footer {
+		padding: 3.5rem 0 1rem;
+
+		.icon-sandals {
+			position: relative;
+			display: block;
+			height: 9rem;
+			text-align: center;
+			font-size: 7rem;
+			color: #979797;
+
+			span {
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				width: 100%;
+				font: 1.55rem $font-helv67;
+				color: color("grey","darken-2");
+			}
+		}
+		.pretty-tel {
+			font: 6.4rem $font-helv47;
+			color: color("grey","lighten-1");
+
+			span {
+				font-family: $font-helv67;
+				color: color("grey","darken-1");
+			}
+		}
+		.normal-tel {
+			font: 2.04rem $font-helv47;
+			color: color("grey","darken-2");
+			letter-spacing: -0.15rem;
+			margin-left: 1rem;
+
+			span {
+				display: block;
+				font-size: 2.678rem;
+				color: color("grey","darken-1");
+				border-top: .1rem dotted rgba(31,22,21,.3);
+			}
+			b {
+				font-weight: normal;
+				color: color("grey","lighten-1");
+			}
+		}
+		.btn-group {
+			margin-top: 3.2rem;
+			padding: 0 .8rem;
+
+			.col { padding-left: .1rem; padding-right: .1rem; }
+			.btn-block {
+				font-size: 2.2rem;
+				line-height: 6.2rem;
+				border-left: .2rem solid transparent;
+			}
+		}
+		hr {
+			@include gradient-vertical-three-colors(#c5d47c,#99b800,50%,#c5d47c);
+			margin: 1.9rem 0;
+			height: .1rem;
+			width: 100%;
+			border: 0;
+		}
+	}

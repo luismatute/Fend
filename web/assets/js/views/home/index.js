@@ -1,0 +1,2 @@
+define(["owl"],function(){$(".home-owl").owlCarousel({items:1,singleItem:!0,autoHeight:!0,nav:!0,navText:!1,mouseDrag:!1,touchDrag:!1,autoPlay:5e3,stopOnHover:!0,lazyLoad:!0}),$(".rst-owl").owlCarousel({items:1,singleItem:!0,autoPlay:5e3,loop:!0,autoHeight:!0,nav:!1,dots:!1})});
+//# sourceMappingURL=../../maps/views/home/index.js.map

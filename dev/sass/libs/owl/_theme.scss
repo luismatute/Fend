@@ -1,0 +1,87 @@
+
+.owl-theme {
+	// Styling Next and Prev buttons
+	.owl-nav {
+		margin-top: 10px;
+		text-align: center;
+		-webkit-tap-highlight-color: transparent;
+
+		[class*='owl-'] {
+			@include translate(0, -50%);
+			position: absolute;
+			top: 50%;
+			height: 9.5rem;
+			width: 6.2rem;
+			color: $nav-color;
+			font-size: $nav-font-size;
+			font-family: $font-icons;
+			background: $nav-background;
+			display: inline-block;
+			cursor: pointer;
+
+			&:hover {
+				background: $nav-background-hover;
+				text-decoration: none;
+			}
+			&::before {
+				@include translate(-50%, -50%);
+				position: absolute;
+				top: 50%;
+				left: 50%;
+			}
+		}
+		.disabled {
+			opacity: $nav-disabled-opacity;
+			cursor: default;
+		}
+		.owl-prev {
+			@extend .icon-left;
+			left: 0;
+		}
+		.owl-next {
+			@extend .icon-right;
+			right: 0;
+		}
+	}
+
+	// Styling dots
+	.owl-nav.disabled + .owl-dots {
+		margin-top: 10px;
+	}
+	.owl-dots {
+		text-align: center;
+		-webkit-tap-highlight-color: transparent;
+
+		.owl-dot {
+			position: relative;
+			display: inline-block;
+			zoom: 1;
+			*display: inline;
+			vertical-align: middle;
+			width: 3rem;
+			height: 4.8rem;
+
+			span {
+				@include translate(-50%,-50%);
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				width: $dot-width;
+				height: $dot-height;
+				// margin: $dot-margin;
+				background: $dot-background;
+				display: block;
+				border-radius: 50%;
+			}
+
+			&.active,
+			&:hover {
+				span {
+					width: 2rem;
+					height: 2rem;
+					background: $dot-background-active;
+				}
+			}
+		}
+	}
+}

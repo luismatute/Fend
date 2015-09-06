@@ -1,0 +1,1 @@
+{"version":3,"sources":["views/default.js"],"names":["require","_conf","jsPath"],"mappings":"AAAAA,SAASC,MAAMC,OAAO","file":"views/default.js","sourcesContent":["require([_conf.jsPath+'/app.js']);"],"sourceRoot":"/source/"}

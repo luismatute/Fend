@@ -1,0 +1,96 @@
+//
+// Grid System
+// --------------------------------------------------
+
+//== Container
+	.container {
+		@include transition(all 0.3s);
+		width: 95%;
+		margin: 0 auto;
+		padding: 0 0;
+		@media (min-width: $screen-lg) { // 1024px
+			width: 960px;
+		}
+	}
+
+	.row {
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: 0;
+
+		// Clear floating children
+		&:after {
+			content: "";
+			display: table;
+			clear: both;
+		}
+
+		.col {
+			@include transition(all .3s);
+			@include box-sizing(border-box);
+			float: left;
+			padding: 0 .5rem;
+			position: relative;
+
+			$i: 1;
+			@while $i <= $num-cols {
+				$perc: unquote((100 / ($num-cols / $i)) + "%");
+				&.s#{$i} {
+					width: $perc;
+					margin-left: 0;
+				}
+				$i: $i + 1;
+			}
+			$i: 1;
+
+			@while $i <= $num-cols {
+				$perc: unquote((100 / ($num-cols / $i)) + "%");
+				&.offset-s#{$i} {
+					margin-left: $perc;
+				}
+				$i: $i + 1;
+			}
+
+			@media (min-width: $viewport-m+1) {
+
+				$i: 1;
+				@while $i <= $num-cols {
+					$perc: unquote((100 / ($num-cols / $i)) + "%");
+					&.m#{$i} {
+						width: $perc;
+						margin-left: 0;
+					}
+					$i: $i + 1;
+				}
+				$i: 1;
+				@while $i <= $num-cols {
+					$perc: unquote((100 / ($num-cols / $i)) + "%");
+					&.offset-m#{$i} {
+					margin-left: $perc;
+				}
+				$i: $i + 1;
+			}
+		}
+
+		@media (min-width: $viewport-l) {
+
+			$i: 1;
+			@while $i <= $num-cols {
+				$perc: unquote((100 / ($num-cols / $i)) + "%");
+				&.l#{$i} {
+					width: $perc;
+					margin-left: 0;
+				}
+				$i: $i + 1;
+			}
+			$i: 1;
+			@while $i <= $num-cols {
+				$perc: unquote((100 / ($num-cols / $i)) + "%");
+				&.offset-l#{$i} {
+					margin-left: $perc;
+				}
+				$i: $i + 1;
+			}
+		}
+	}
+}

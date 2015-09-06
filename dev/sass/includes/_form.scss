@@ -1,0 +1,14 @@
+//
+// Controls used in Forms
+// --------------------------------------------------
+input,
+textarea {
+  padding: .5rem;
+  margin-bottom: .5rem;
+  display: block;
+  width: 100%;
+  box-shadow: none;
+  border: thin solid color("grey");
+}
+
+input[type="submit"] { margin-top: .85rem; }

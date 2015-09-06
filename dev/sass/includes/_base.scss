@@ -1,0 +1,71 @@
+//
+// Base Stylings
+// --------------------------------------------------
+
+html {
+	@include box-sizing(border-box);
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	font-size: $font-size;
+
+	@media (max-width: $screen-sm - 1) {
+		font-size: 8px;
+	}
+	@media (max-width: $screen-xs - 1) {
+		font-size: 6px;
+	}
+}
+
+*, *:before, *:after {
+  	@include box-sizing(inherit);
+}
+
+body {
+	font: $font-weight 2.2rem/2.8rem $font-base;
+	color: $font-color;
+	background: $body-bg;
+	-webkit-font-smoothing: antialiased;
+	font-smoothing: antialiased;
+}
+
+a {
+	// color: $link-color;
+	text-decoration: none;
+
+	&:hover,
+	&:focus,
+	&:active {
+		// color: darken($link-color, 10%);
+	}
+}
+
+b { font-weight: normal }
+
+ul {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+//== Main Wrapper
+	.main-wrap {
+		@include transition(all $transition-duration);
+
+		&.modal {
+			& ~ .overlay {
+				opacity: 1;
+				visibility: visible;
+			}
+		}
+	}
+	.overlay {
+		position: fixed;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		z-index: 20;
+		opacity: 0;
+		visibility: hidden;
+		background: rgba(0,0,0,.8);
+		content: '';
+	}

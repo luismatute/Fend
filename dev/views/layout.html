@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<title>Fend</title>
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+		<link rel="stylesheet" href="/assets/css/master.css">
+		<script>
+			window._conf = new function () {
+				this.name = 'Fend';
+				this.jsPath = '/assets/js';
+				this.jsViews = this.jsPath + '/views';
+				this.jsMain = this.jsPath + '/app.js';
+				this.reqView = function(view) {
+					require([_conf.jsMain], function () {
+						require([_conf.jsViews+view]);
+					});
+				};
+			};
+		</script>
+		<script data-main="/assets/js/views/default" src="/assets/js/libs/r.js"></script>
+	</head>
+	<body>
+		<%= contents %>
+	</body>
+</html>

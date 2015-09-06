@@ -1,0 +1,18 @@
+//
+// Social Styles
+// --------------------------------------------------
+
+//== 
+	.social-box {
+		a {
+			display: inline-block;
+			padding: 1rem 0;
+			width: 8rem;
+			font-size: 4.4rem;
+			color: color("grey","lighten-1");
+			border-left: .2rem solid color("grey","lighten-1");
+
+			&:last-child { border-right: .2rem solid color("grey","lighten-1"); }
+			&:hover { color: darken(color("grey","lighten-1"), 10%); }
+		}
+	}

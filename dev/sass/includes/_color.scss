@@ -1,0 +1,82 @@
+//
+// Colors
+// --------------------------------------------------
+
+//NO LE GUSTA MAS ASI??
+
+//== Color Maps
+	$red: (
+		"base"       : #d62415
+	);
+
+	$grey: (
+		"base"       : #7b7b7b
+	);
+
+	$green: (
+		"base"       : #809a00
+	);
+
+	$brown: (
+		"base"       : #797266
+	);
+
+	$shades: (
+		"black"      : #000000,
+		"white"      : #FFFFFF,
+		"transparent": transparent
+	);
+
+	$colors: (
+		"red"        : $red,
+		"grey"       : $grey,
+		"green"      : $green,
+		"brown"      : $brown,
+		"shades"     : $shades
+	);
+
+//== Color Classes
+	@each $color_name, $color in $colors {
+		@each $color_type, $color_value in $color {
+			@if $color_type == "base" {
+				.#{$color_name}-bg {
+					background-color: $color_value !important;
+				}
+				.#{$color_name}-text {
+					color: $color_value !important;
+				}
+			}
+			@else {
+				.#{$color_name}-bg.#{$color_type} {
+					background-color: $color_value !important;
+				}
+				.#{$color_name}-text.text-#{$color_type} {
+					color: $color_value !important;
+				}
+			}
+		}
+	}
+
+//== Shade classes
+	@each $color, $color_value in $shades {
+		.#{$color} {
+			background-color: $color_value !important;
+		}
+		.#{$color}-text {
+			color: $color_value !important;
+		}
+	}
+
+//== color function
+// usage: color("name_of_color", "type_of_color")
+// to avoid to repeating map-get($colors, ...)
+	@function color($color, $type: "base") {
+		@if map-has-key($colors, $color) {
+			$curr_color: map-get($colors, $color);
+			@if map-has-key($curr_color, $type) {
+				@return map-get($curr_color, $type);
+			}
+		}
+		@warn "Unknown `#{$color}` in $colors.";
+		@return null;
+	}
