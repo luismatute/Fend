@@ -9,6 +9,16 @@ textarea {
   width: 100%;
   box-shadow: none;
   border: thin solid color("grey");
+  outline: none;
 }
 
 input[type="submit"] { margin-top: .85rem; }
+
+.field-wrap{
+  &.error input {
+    border-color: #E74C3C;
+  }
+  &.valid input {
+    border-color: #2ECC71;
+  }
+}

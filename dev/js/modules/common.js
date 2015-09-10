@@ -41,6 +41,6 @@ define('common' ,['fend'], function (){
 
 	// General event binding
 	function bindEvents () {
-		$('.de').fend();
+		var fend = $('.de').fend();
 	}
 });
