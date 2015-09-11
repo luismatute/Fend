@@ -1,8 +1,7 @@
 // Validation Plugin
 // Date: August 2015
 // Developers:
-//  Luis Matute      	- lmatute@sanservices.hn
-//  Jean-Pierre Sierens	- jpsierens@sanservices.hn
+//  Luis Matute      	- luis.matute@me.com
 // Description:
 //
 // ------------------------------------------------------------------
